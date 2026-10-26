@@ -1,17 +1,18 @@
-# uts_kantin_mobile
+# Aplikasi Pencatat Menu Kantin - UTS Pemrograman Mobile
 
-A new Flutter project.
+Aplikasi Flutter sederhana untuk mencatat dan menampilkan daftar menu kantin kampus. Dibuat untuk memenuhi Ujian Tengah Semester Ganjil 2026/2027 mata kuliah Pemrograman Mobile.
 
-## Getting Started
+## Identitas Mahasiswa
+* **Nama:** Naufal Dimas Fajri
+* **NIM:** 3337240070
+* **Mata Kuliah:** Pemrograman Mobile
+* **Dosen Pengampu:** Royan Habibie Sukarna
 
-This project is a starting point for a Flutter application.
+## Fitur Aplikasi
+1. **Halaman Daftar Menu:** Menampilkan daftar menu awal beserta harganya menggunakan `ListView.builder` dan `Card`.
+2. **Halaman Detail Menu:** Menampilkan rincian nama dan harga hidangan saat item dipilih.
+3. **Halaman Tambah Menu:** Form input menu baru dengan validasi tidak boleh kosong dan validasi input angka pada harga.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Package yang Digunakan
+* `get`: Untuk manajemen navigasi antar halaman (`GetMaterialApp`, `Get.to()`, `Get.back()`).
+* `google_fonts`: Untuk kustomisasi tipografi pada custom reusable widget (`TeksKantin`).
