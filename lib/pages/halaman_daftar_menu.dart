@@ -17,9 +17,25 @@ class _HalamanDaftarMenuState extends State<HalamanDaftarMenu> {
     {'nama': 'Indomie Telur Kornet (Internet)', 'harga': 12000},
     {'nama': 'Nasi Goreng Madrid', 'harga': 15000},
     {'nama': 'Es Aurora', 'harga': 10000},
-    {'nama': 'Roti kukus panggang (rokupang) ', 'harga': 9000},
+    {'nama': 'Roti kukus panggang (rokupang)', 'harga': 9000},
     {'nama': 'Es Teh solo', 'harga': 5000},
   ];
+
+  // Fungsi pencocokan ikon bawaan Flutter yang unik untuk setiap menu
+  IconData _pilihIkonBawaan(String nama) {
+    final teks = nama.toLowerCase();
+    if (teks.contains('indomie') || teks.contains('mie') || teks.contains('bakso')) {
+      return Icons.ramen_dining_rounded;
+    } else if (teks.contains('es') || teks.contains('teh') || teks.contains('aurora')) {
+      return Icons.local_drink_rounded;
+    } else if (teks.contains('roti') || teks.contains('rokupang') || teks.contains('panggang')) {
+      return Icons.bakery_dining_rounded;
+    } else if (teks.contains('ayam') || teks.contains('geprek')) {
+      return Icons.lunch_dining_rounded;
+    } else {
+      return Icons.rice_bowl_rounded;
+    }
+  }
 
   Future<void> _bukaTambahMenu() async {
     final menuBaru = await Get.to(() => const HalamanTambahMenu());
@@ -67,9 +83,9 @@ class _HalamanDaftarMenuState extends State<HalamanDaftarMenu> {
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: ListTile(
-                    leading: const Icon(
-                      Icons.restaurant_menu_rounded,
-                      color: Color(0xFF6F4E37),
+                    leading: Icon(
+                      _pilihIkonBawaan(item['nama']),
+                      color: const Color(0xFF6F4E37),
                     ),
                     title: TeksKantin(
                       item['nama'],

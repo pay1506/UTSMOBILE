@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // Saya menggunakan font Plus Jakarta Sans supaya tampilan teks menu terlihat bersih dan modern.
-// Pemilihan warna cokelat tua dan hijau gelap disesuaikan dengan tema kantin kampus yang hangat
-// serta memudahkan pengguna membedakan antara nama makanan dan nominal harganya.
+// Pemilihan warna cokelat tua dan hijau gelap disesuaikan dengan tema kantin kampus yang teknik abis
+// serta warna hijau memudahkan pengguna membedakan antara nama makanan dan nominal harganya.
 class TeksKantin extends StatelessWidget {
   final String isiTeks;
   final double ukuran;
